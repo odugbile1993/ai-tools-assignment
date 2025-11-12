@@ -16,34 +16,37 @@
 ### Mitigation Strategies
 
 **TensorFlow Fairness Indicators:**
-```python
+
 # Example fairness analysis
+
 from tensorflow_model_analysis import FairnessIndicators
 
-# Would analyze performance across different subgroups
+ #Would analyze performance across different subgroups
+ 
 # Check for equalized odds, demographic parity
 
 Data Augmentation:
 
-Add rotated, skewed, and noisy versions of digits
+- Add rotated, skewed, and noisy versions of digits
 
-Include digits from diverse writing styles
+- Include digits from diverse writing styles
 
 Biases in Amazon Reviews Model
+
 Language Bias:
 
-Model trained primarily on English reviews
+- Model trained primarily on English reviews
 
-Cultural differences in expression not captured
+- Cultural differences in expression not captured
 
-Potential bias against non-native English speakers
+- Potential bias against non-native English speakers
 
 Product Bias:
 
 Over-representation of popular brands
 
-
 # Custom rules for fairness
+
 from spacy.language import Language
 
 @Language.component("fairness_check")
@@ -52,8 +55,11 @@ def fairness_check(doc):
     # Check for biased language patterns
     # Flag potential unfair comparisons
     return doc
+    
 2. Troubleshooting Challenge
+   
 Buggy Code Analysis
+
 Common TensorFlow Errors and Fixes:
 
 Dimension Mismatches:
@@ -98,6 +104,7 @@ def fixed_model():
     return model
 
 Optimization Recommendations
+
 Model Optimization:
 
 Use mixed precision training
@@ -121,25 +128,3 @@ Regular bias auditing
 Diverse training data collection
 
 Transparent model documentation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Under-representation of products from smaller companies
-
-spaCy Rule-Based Mitigation
